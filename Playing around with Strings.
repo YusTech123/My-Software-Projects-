@@ -1,0 +1,19 @@
+using System.Runtime.InteropServices;
+
+namespace MY_First_TEST_Projects
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter your Name: ");
+            string name= Console.ReadLine();
+            Console.WriteLine("Enter your Age");
+            string age = Console.ReadLine();
+            Console.WriteLine("What country are you from");
+           string country = Console.ReadLine(); 
+            Console.WriteLine("Hiya " + name + " you are " + age + " and you're from " + country);
+
+
+            Console.ReadLine();
+        }
