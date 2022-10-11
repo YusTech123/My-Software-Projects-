@@ -1,0 +1,34 @@
+using System.Runtime.InteropServices;
+
+namespace MY_First_TEST_Projects
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string colour, pluralNoun, celebrity;
+            
+            Console.WriteLine("Enter a colour");
+            
+            colour = Console.ReadLine();
+           
+            Console.WriteLine("Enter a pluralNoun");
+            
+            pluralNoun = Console.ReadLine();
+            
+            Console.WriteLine(" celebrity ");
+           
+            celebrity = Console.ReadLine();
+
+            Console.WriteLine(" Roses are "   +  colour);
+            
+            Console.WriteLine( pluralNoun   +   " are blue ");
+            
+            Console.WriteLine(" I Love "    +  celebrity);
+            
+            
+
+             
+            
+            Console.ReadLine();
+        }
