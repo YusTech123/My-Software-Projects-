@@ -1,0 +1,83 @@
+using System.Runtime.InteropServices;
+
+namespace MY_First_TEST_Projects
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+
+            Console.WriteLine(GetDay(3));
+            Console.ReadLine();
+
+
+            
+            
+                
+
+                 
+            
+          
+
+        
+        }
+        static string GetDay(int dayNum)
+        {
+            
+            string dayName;
+
+            switch (dayNum)
+            {
+                case 0:
+                    dayName = "monday";
+                    break;
+                    
+                case 1:
+                    dayName = "tuesday";
+                    break;
+
+                case 2:
+                    dayName = "Wednesday";
+                    break ;
+
+                    case 3:
+                    dayName = "Thursday";
+                    break;
+
+                    case 4:
+                    dayName = "friday";
+                    break;
+
+                case 5:
+                    dayName = "saturday";
+                    break;
+
+                case 6:
+                    dayName = "Sunday";
+                    break;
+
+
+                default:
+                    dayName = "Invalid Day Number";
+                    break;
+
+
+
+
+
+
+
+                    
+            }
+
+
+            return dayName;
+
+
+        }
+
+    }
+}
