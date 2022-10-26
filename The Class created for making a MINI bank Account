@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Week_5_Tutorial_Bank_account
+{
+    internal class Bankaccount
+    {
+         private string number;
+        private double balance;
+
+
+        public Bankaccount(string num, double bal)
+        {
+
+            number = num;
+            balance = bal;
+
+        }
+
+        public Bankaccount (string num)
+        {
+
+            number = num;
+            balance = 0;
+
+        }
+        public void Deposit(double amount) 
+        { 
+            balance += amount;
+        
+        
+        
+        }
+        public bool Withdraw(double amount) 
+        
+        {
+            if (amount < balance)
+            {
+                balance -= amount;
+                return true;    
+            }
+            return false;   
+      
+        
+        }
+
+        public double GetBalance()
+        {
+            return balance;
+        }
+
+        public string GetNumber()
+        {
+            return number;
+        }
+      
+        public void Close()
+        {
+            balance = 0;
+        }
+
+
+
+    }
+
+
+
+
+}
