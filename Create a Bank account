@@ -1,0 +1,27 @@
+namespace Week_5_Tutorial_Bank_account
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Bankaccount account1 = new Bankaccount("AB123", 1000.35);
+            Bankaccount account2 = new Bankaccount("CD456");
+
+
+            double withdrawnAmount = 200.0;
+            bool isSuccessul= account1.Withdraw(withdrawnAmount);
+
+            if (isSuccessul)
+            {
+                Console.WriteLine($"Success! new Balance: { account1.GetBalance()}");
+            }
+            else
+            {
+                Console.WriteLine($"Failed! Not enough money on account {account1.GetNumber()},{account1.GetBalance()}");
+            }
+        }
+
+
+    }
+}
