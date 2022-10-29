@@ -1,0 +1,26 @@
+namespace Test_Code
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+
+        {
+            string secretWord = "Mandem";
+            string guess = "";
+
+            while(guess != secretWord)
+            {
+                Console.WriteLine("Enter guess: ");
+                guess = Console.ReadLine();
+            }
+            Console.WriteLine("You Win!");
+            Console.ReadLine();
+        }
+
+
+
+
+            
+        
+    }
+}
