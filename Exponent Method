@@ -1,0 +1,23 @@
+namespace Test_Projects
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetPow(2,6));
+             
+            
+            Console.ReadLine();
+        }
+        static int GetPow( int baseNum, int powNum) // The GETPOW accepts the Two parameters baseNum and powNum. this will create the Following baseNum(2) to the power of PowNum (6)
+        { // The console will print out the following Answer (64)
+            int result = 1;
+            // Created a For loop. So if I= 0 Keep looping unless I is less than powNum.
+            for (int i = 0; i < powNum; i++) 
+            {
+                result = result * baseNum;
+            }
+            return result;
+        }
+    }
+}
