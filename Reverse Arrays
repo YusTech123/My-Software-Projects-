@@ -1,0 +1,29 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int[] nums1 = { 1, 9, 8, 3, 8, 7 }; //
+
+        int[] nums = new int[nums1.Length];
+
+        for (int i = 0, j = nums.Length - 1; i < nums.Length; i++, j--)
+        {
+            nums[j] = nums1[i];
+            Console.WriteLine($"Index {j} of nums = {nums1[i]}");
+
+        }
+
+        
+
+
+        foreach (int nums11 in nums)
+        { 
+            Console.WriteLine(nums11);
+
+        
+        }
+        
+    }
+}
