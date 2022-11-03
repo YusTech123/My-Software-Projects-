@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Student_Test
+{
+    internal class Students
+       
+    {
+        public string name;
+        public string subject;
+        public int grade;
+
+        public Students(string aName, string aSubject, int aGrade) 
+        { 
+        name = aName;
+            subject = aSubject;
+            grade = aGrade;
+
+        
+        }
+        public bool HasHonors() 
+        {
+            if (grade >= 2) 
+            
+            {
+                return true;
+
+            }
+            return false;
+        }
+    } 
+}
+namespace Student_Test
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Students student1 = new Students("Yusuf", "IT", 3);
+            Students students2 = new Students("Ali", "Business", 10);
+
+            Console.WriteLine(student1.HasHonors());
+            Console.WriteLine(students2.HasHonors());
+
+
+
+            Console.ReadLine();
+        }
+
+
+        
+     
+    }
