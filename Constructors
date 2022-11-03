@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MY_Test_Enviroment
+{
+    internal class BOOK_TEST
+    {
+        public string title;
+        public string author;
+        public int pages;
+
+        public BOOK_TEST(string aTitle, string aAuthor, int aPages) 
+        {
+            title = aTitle;
+            author = aAuthor;
+            pages = aPages;
+            Console.WriteLine(aTitle,aAuthor,aPages);        
+        }
+
+    }
+}namespace MY_Test_Enviroment
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            BOOK_TEST book1 = new BOOK_TEST("Harry Potter" ,"Yusuf Mahamed",400);
+            BOOK_TEST book2 = new BOOK_TEST("MY life", "Yusuf Mahamed", 500);
+
+            book2.title = "MY World";
+
+            Console.WriteLine(book2.title);
+    
+            
+            
+            
+
+            
+            
+            
+            
+            
+         Console.ReadLine();
+        } 
+    }
+}
