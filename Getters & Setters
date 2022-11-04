@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Getters_and_Setters
+{
+    internal class Movie
+    {
+        public string title;
+        public string director;
+        private string rating;
+
+        public Movie (string aTitle, string aDirector, string aRating) 
+        {
+            title = aTitle;
+            director = aDirector;
+            rating = aRating;
+        }
+        public string Rating 
+        {
+            get { return Rating; }
+            set 
+            {
+                if (value == "G" || value == "PG" || value == "PG-13" || value == "R" || value == "NP") 
+                { 
+                rating = value;
+                }
+                else
+                {
+                    rating = "NR";
+                }
+            
+            }
+        }
+    }
+}
+using System.ComponentModel.DataAnnotations;
+using System.Net.NetworkInformation;
+
+namespace Getters_and_Setters
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Movie avengers = new Movie("The Avengers, Joss Whedon", "PG-13");
+           
+             
+            
+           Movie Shrek = new Movie("Shrek", "Adam Adamson", "PG");
+            Console.WriteLine(avengers.Rating);
+            Console.ReadLine();
+        }
+
+
+    }
+}
