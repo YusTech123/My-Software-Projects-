@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VendingMachines
+{
+    internal class VendingMachine
+    {
+        private string name;
+        private string location;
+
+        private int cans;
+        private int tokens;
+
+
+
+
+        public VendingMachine(int c)
+        {
+            this.cans = c;
+            this.tokens = 0;
+            name = "default name";
+            location = "default location";
+
+
+
+        }
+
+        public VendingMachine() :
+        this(0)
+        {
+        }
+        public void SetName(string n)
+        {
+            name = n;
+        }
+
+        public void SetLocation(string l)
+
+        {
+            location = l;
+
+        }
+
+        public string GetLocation()
+        {
+            return location;
+
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+        public void AddCans(int c)
+        {
+            cans += c;
+        }
+
+        public bool InsertToken(int t)
+
+        {
+            if (t <= cans)
+            {
+                tokens += t;
+                cans -= t;
+                return true;
+            }
+            return false;
+        }
+
+        public bool InsertToken()
+        {
+            return InsertToken(1);
+        }
+
+        public int GetCans()
+        {
+            return cans;
+        }
+
+        public string ToString()
+
+        {
+            return $"Machine:{name}, " +
+                   $"Location: {location}," +
+                   $"Cans Left: {cans}, " +
+                   $" Tokens : {tokens}, ";
+        }
+    }
+}
